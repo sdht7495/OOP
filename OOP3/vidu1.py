@@ -3,52 +3,33 @@ class Point:
     x = int
     y = int
 
-    def _init_(self, x=0, y=0):
+    def __init__(self, x=0, y=0):
         self.x = x
         self.y = y
     
-    def_str_(self):
-        return"(%sd,%d)" %(self.x, self.y)
+    def __str__(self):
+        return"(%d,%d)" %(self.x, self.y)
 
-    def read(self):
+    def Read(self):
         self.x = int(input("input x: "))
         self.y = int(input("input y: "))
     
     def distance(self, point):
-        d = math.sqrt(self.x - point.x)**2 + (self.y - point.y)
+        d = math.sqrt((self.x - point.x)**2 + (self.y - point.y)**2)
         return d
     
 
-    diemA = Point(3,4)
-    print(diemA)
+diemA = Point(3,4)
+print(diemA)
 
-    diemB = (Point)
-    diemB.Read()
-    print(diemB)
+diemB = Point()
+diemB.Read()
+print(diemB)
 
-    diemC = Point(-diemB.x, _diemB>y)
-    print(diemC)
+diemC = Point(-diemB.x, -diemB.y)
+print(diemC)
 
-    print(diemb.distance(diemC))
+print(diemB.distance(diemC))
 
-
-
-
-
-
-#     def printPoint(self):
-#         print("(%d, %d)" % (self.x, self.y))
-
-# diemA = Point()
-# diemA.x = 3
-# diemA.y = 4
-# diemA.printPoint()
-
-# diemrB = Point()
-# diemB.x = input('Nhap vao so xB: ')
-# diemB.y = input('nhap vao so yB: ')
-# diemB.printPoint()
-
-# diemC = Point()
-# diemC.x = -diemB.x
-# diemC.y = -diemC.y
+diemO = Point(0, 0)
+print(diemB.distance(diemO))
