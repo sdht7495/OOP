@@ -37,13 +37,13 @@ class Nhan_vien:
         print(f" luong nha vien: {luong} VND")
 
     def TangLuong(self, delta):
-        he_so = self.hesoluong + delta
-        luongmoi = self.luongCB * he_so
+        he_so = self.__hesoluong + delta
+        luongmoi = self.__luongCB * he_so
 
         if luongmoi > Nhan_vien.luong_max:
             print("luong moi khong duoc cao hon muc luong cao nhat")
             return False
         else :
-            self.hesoluong = he_so
+            self.__hesoluong = he_so
             print("tang luong thanh cong")
             return True
